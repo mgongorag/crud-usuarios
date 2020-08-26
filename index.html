@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+     <title>Document</title>
+</head>
+
+<body>
+
+     <header>
+          <nav class="navbar navbar-light bg-dark">
+               <a class="navbar-brand text-light" href="#">
+                    CRUD - Consumiendo Servicios de una API REST
+               </a>
+          </nav>
+     </header>
+
+     <section class="container mt-5 card">
+
+          <form id="formAgregarUsuario">
+               <div class="card-body">
+                    <h3 class="card-title">Formulario de Registro</h3>
+
+                    <div class="form-group d-none">
+                         <label for="Id Usuario">Id</label>
+                         <input type="text" class="form-control" id="idUsuario" disabled>
+                    </div>
+
+                    <div class="form-group">
+                         <label for="nombres">Nombre</label>
+                         <input type="text" class="form-control" id="txtNombres" placeholder="Ingrese los nombres"
+                              required>
+                    </div>
+                    <div class="form-group">
+                         <label for="apellidos">Apellidos</label>
+                         <input type="apellidos" class="form-control" id="txtApellidos"
+                              placeholder="Ingrese los apellidos" required>
+                    </div>
+
+                    <div class="form-group">
+                         <label for="direccion">Direccion</label>
+                         <input type="text" class="form-control" id="txtDireccion" placeholder="Ingrese la direccion"
+                              required>
+                    </div>
+
+                    <div class="form-group">
+                         <label for="Email">Email</label>
+                         <input type="email" class="form-control" id="txtEmail" placeholder="Ingrese el email" required>
+                    </div>
+
+                    <div class="form-group">
+                         <label for="password">Password</label>
+                         <input type="password" class="form-control" id="txtPassword" placeholder="Ingrese la password" required>
+                    </div>
+
+                    <div class="d-flex justify-content-center" >
+                         <div class="spinner-border m-2 text-primary d-none" id="spinnerAgregarUsuario" role="status">
+                           <span class="sr-only">Enviando...</span>
+                         </div>
+                    </div>
+
+                    <div class="form-group">
+                         <div class="alert d-none" id="alertAgregarUsuario">
+                              En dado caso ocurre un error en la insersion
+                         </div>
+                    </div>
+
+
+                    <div class="form-row">
+                         <div class="col-6">
+                              <button type="submit" class="btn btn-primary w-100" id="btnAgregarUsuario">Guardar</button>
+                         </div>
+                         <div class="col-6 d-none">
+                              <button type="submit" class="btn btn-info w-100 " id="btnActualizar">Actualizar</button>
+                         </div>
+
+                         <div class="col-6">
+                              <button type="submit" class="btn btn-danger w-100">Cancelar</button>
+                         </div>
+                    </div>
+          </form>
+          </div>
+     </section>
+
+     <div class="container card card-body mt-5" id="table">
+          <table class="table table-bordered">
+               <h5 class="card-title">Usuarios</h5>
+
+               <thead>
+                    <tr>
+                         <th scope="col" class="text-center">#</th>
+                         <th scope="col" class="text-center">Nombres</th>
+                         <th scope="col" class="text-center">Direccion</th>
+                         <th scope="col" class="text-center">Email</th>
+                         <th scope="col" colspan="2" class="text-center">Opciones</th>
+
+                    </tr>
+               </thead>
+               <tbody id="cuerpo-tabla">
+                    
+                   
+                   
+               </tbody>
+          </table>
+          
+     </div>
+
+     <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
